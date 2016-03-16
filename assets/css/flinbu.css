@@ -8836,3 +8836,6 @@ button.close {
 .fa-percent:before {
   content: "\f295";
 }
+body {
+  font-size: 14px;
+}
