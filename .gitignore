@@ -1,2 +1,4 @@
 flinbu_rsa
 .ftpconfig
+.DS_Store
+*.DS_Store
