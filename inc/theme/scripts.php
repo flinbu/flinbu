@@ -19,7 +19,14 @@
         'name' => 'flinbu-scripts',
         'type' => 'script',
         'location' => $js . '/flinbu.js',
-        'deps' => array('jquery', 'bootstrap', 'scroll-reveal', 'parallax', 'sweet-alert-scripts', 'animate-number', 'isotope', 'web-font-loader'),
+        'deps' => array('jquery', 'bootstrap', 'scroll-reveal', 'parallax', 'sweet-alert-scripts', 'animate-number', 'isotope', 'web-font-loader', 'flinbu-functions'),
+        'footer' => true
+      ),
+      array(
+        'name' => 'flinbu-functions',
+        'type' => 'script',
+        'location' => $js . '/flinbu.func.js',
+        'deps' => array('jquery'),
         'footer' => true
       ),
       //Bootstrap

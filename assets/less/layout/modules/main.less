@@ -1,4 +1,29 @@
 // main: ../../flinbu.less
 section.module.main {
   background-color: @color-salmon;
+  .content {
+    display: table;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    .tblr(0);
+    .vertical {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    h1.logo {
+      img {
+        max-width: 300px;
+        position: relative;
+        left: -30px;
+      }
+    }
+  }
+  .background {
+    .opacity(0.20);
+    img {
+      .blur(5);
+    }
+  }
 }

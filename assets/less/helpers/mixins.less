@@ -244,3 +244,16 @@
     color: @color-tumblr;
   }
 }
+.tblr(@size) {
+  top: unit(@size, px);
+  bottom: unit(@size, px);
+  left: unit(@size, px);
+  right: unit(@size, px);
+}
+.blur(@size) {
+  -webkit-filter: blur(unit(@size, px));
+  -moz-filter: blur(unit(@size, px));
+  -o-filter: blur(unit(@size, px));
+  -ms-filter: blur(unit(@size, px));
+  filter: blur(unit(@size, px));
+}

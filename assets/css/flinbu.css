@@ -8839,9 +8839,69 @@ button.close {
 body {
   font-size: 14px;
 }
+body main {
+  margin: 0;
+  padding: 0;
+}
+.parallax {
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 0;
+  overflow: hidden;
+}
+.parallax img {
+  display: none;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
 section.module {
   min-height: 200px;
 }
+section.module .full-size {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 section.module.main {
   background-color: #E95841;
+}
+section.module.main .content {
+  display: table;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+section.module.main .content .vertical {
+  display: table-cell;
+  vertical-align: middle;
+}
+section.module.main .content h1.logo img {
+  max-width: 300px;
+  position: relative;
+  left: -30px;
+}
+section.module.main .background {
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+section.module.main .background img {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
 }
