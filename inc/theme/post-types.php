@@ -27,6 +27,23 @@
 				'has_front' => true,
 				'rewrite' => true
       ),
+      array(
+        'name' => 'modules',
+				'general_name' => 'Modules',
+				'singular_name' => 'module',
+				'sufix_min' => '',
+				'gen_conector' => 'the',
+				'level' => 0,
+				'exclude_from_search' => true,
+				'supports' => array(
+					'title'
+				),
+				'icon' => 'dashicons-layout',
+				'has_fields' => true,
+				'has_tax' => true,
+				'has_front' => false,
+				'rewrite' => true
+      ),
 		);
 		register_custom_post_types($post_types, 'en');
 	}

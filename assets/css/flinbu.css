@@ -8839,3 +8839,9 @@ button.close {
 body {
   font-size: 14px;
 }
+section.module {
+  min-height: 200px;
+}
+section.module.main {
+  background-color: #E95841;
+}

@@ -1635,4 +1635,12 @@ function paginator($item_per_page, $total_records, $total_pages, $current_page, 
   }
   echo '<div class="paginator text-center">' . $pagination . '</div>'; //return pagination links
 }
+
+/**
+ * Return user device
+ * @return void
+ */
+function get_device() {
+  return (is_mobile()) ? 'mobile' : 'desktop';
+}
 ?>

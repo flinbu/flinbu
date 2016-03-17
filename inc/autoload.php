@@ -1,6 +1,7 @@
 <?php
   get_template_part('inc/theme/mobile', 'detect'); //Mobile Detect
   get_template_part('inc/theme/functions'); //Functions
+  get_template_part('inc/theme/globals'); //Globals
   get_template_part('inc/theme/ajax'); //Ajax
   get_template_part('inc/theme/bootstrap', 'menu'); //Bootstrap Walker
   get_template_part('inc/theme/custom', 'styles'); //Custom Styles
