@@ -12,7 +12,8 @@
       array(
         'name' => 'flinbu-styles',
         'type' => 'style',
-        'location' => $css . '/flinbu.css'
+        'location' => $css . '/flinbu.css',
+        'deps' => array('sweet-alert-styles')
       ),
       array(
         'name' => 'flinbu-scripts',

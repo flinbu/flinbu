@@ -3,7 +3,5 @@
   <head>
     <?php wp_head(); ?>
   </head>
-  <body>
-    <?php wp_footer(); ?>
-  </body>
-</html>
+  <body <?php body_class(); ?>>
+    <?php open_body(); ?>

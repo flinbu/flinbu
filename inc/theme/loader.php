@@ -56,7 +56,7 @@
           't' => get_template_directory_uri(),
           'fid' => get_theme_option('facebook_app_id')
         );
-        wp_localize_script('planciudad-scripts' . $sufix, 'ep_data', $data);
+        wp_localize_script('flinbu-scripts' . $sufix, 'flinbu', $data);
     }
     add_action('wp_enqueue_scripts', 'enqueue_scripts');
 
@@ -66,14 +66,16 @@
     add_filter('show_admin_bar', 'state_admin_bar');
 
     function header_third_scripts() {
-        theme_third_scripts('header_scripts');
+        theme_third_scripts('header');
     }
-    add_action('wp_head', 'header_third_scripts');
+    add_action('wp_head', 'header_third_scripts', 10);
 
     function footer_third_scripts() {
-        theme_third_scripts('footer_scripts');
+        theme_third_scripts('footer');
     }
-    add_action('wp_footer', 'footer_third_scripts');
+    add_action('wp_footer', 'footer_third_scripts', 1);
+
+    add_action('wp_head', 'meta_tags', 0);
 
     remove_action('wp_head', 'wp_generator');
     remove_action('wp_head', 'rsd_link');
