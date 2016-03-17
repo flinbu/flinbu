@@ -41,7 +41,7 @@
       array(
         'name' => 'scroll-reveal',
         'type' => 'script',
-        'location' => $plugins . '/scrollreveal/scrollreveal.min.js',
+        'location' => $plugins . '/scrollreveal/scrollReveal.min.js',
         'deps' => array('jquery'),
         'footer' => true
       ),
@@ -49,7 +49,7 @@
       array(
         'name' => 'parallax',
         'type' => 'script',
-        'location' => $plugins . '/parallax/parallax.min.js',
+        'location' => $plugins . '/parallax/jquery.scrolly.min.js',
         'deps' => array('jquery'),
         'footer' => true
       ),

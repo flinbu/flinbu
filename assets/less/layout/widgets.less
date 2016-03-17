@@ -1,0 +1,24 @@
+// main: ../flinbu.less
+ul.social {
+  .nav();
+  text-align: center;
+  margin: 20px 0;
+  li {
+    display: inline-block;
+    margin-left: -4px;
+    .social_links_colors(fade(@color-white, 75%));
+    a {
+      padding: 5px 8px;
+      i {
+        font-size: 24px;
+      }
+    }
+    &:hover, &:focus, &:active {
+      background: none;
+      a {
+        background: none;
+        color: fade(@color-white, 100%);
+      }
+    }
+  }
+}

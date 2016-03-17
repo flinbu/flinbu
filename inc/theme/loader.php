@@ -22,10 +22,6 @@
               'type' => 'script'
             ),
             array(
-              'name' => 'parallax',
-              'type' => 'script'
-            ),
-            array(
               'name' => 'sweet-alert-scripts',
               'type' => 'script'
             ),

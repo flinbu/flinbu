@@ -10,4 +10,5 @@ WebFont.load({
 $(document).ready(function() {
   $('.full-size').fullSize();
   $('.parallax').parallax();
+  window.sr = new scrollReveal();
 });

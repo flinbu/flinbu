@@ -6485,7 +6485,9 @@ button.close {
 .modal-header:before,
 .modal-header:after,
 .modal-footer:before,
-.modal-footer:after {
+.modal-footer:after,
+ul.social:before,
+ul.social:after {
   content: " ";
   display: table;
 }
@@ -6504,7 +6506,8 @@ button.close {
 .pager:after,
 .panel-body:after,
 .modal-header:after,
-.modal-footer:after {
+.modal-footer:after,
+ul.social:after {
   clear: both;
 }
 .center-block {
@@ -6758,8 +6761,8 @@ button.close {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../../fonts/fontawesome-webfont.eot?v=4.5.0');
-  src: url('../../fonts/fontawesome-webfont.eot?#iefix&v=4.5.0') format('embedded-opentype'), url('../../fonts/fontawesome-webfont.woff2?v=4.5.0') format('woff2'), url('../../fonts/fontawesome-webfont.woff?v=4.5.0') format('woff'), url('../../fonts/fontawesome-webfont.ttf?v=4.5.0') format('truetype'), url('../../fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular') format('svg');
+  src: url('../fonts/fontawesome/fontawesome-webfont.eot?v=4.5.0');
+  src: url('../fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.5.0') format('embedded-opentype'), url('../fonts/fontawesome/fontawesome-webfont.woff2?v=4.5.0') format('woff2'), url('../fonts/fontawesome/fontawesome-webfont.woff?v=4.5.0') format('woff'), url('../fonts/fontawesome/fontawesome-webfont.ttf?v=4.5.0') format('truetype'), url('../fonts/fontawesome/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -8843,8 +8846,15 @@ body main {
   margin: 0;
   padding: 0;
 }
+[data-sr] {
+  visibility: hidden;
+}
 .parallax {
   background-color: transparent;
+  background-size: cover;
+  background-position: 50% 0;
+  background-repeat: repeat;
+  background-attachment: fixed;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -8853,18 +8863,210 @@ body main {
   left: 0px;
   right: 0px;
   z-index: 0;
+}
+ul.social {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+  margin: 20px 0;
+}
+ul.social > li {
+  position: relative;
+  display: block;
+}
+ul.social > li > a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}
+ul.social > li > a:hover,
+ul.social > li > a:focus {
+  text-decoration: none;
+  background-color: #eeeeee;
+}
+ul.social > li.disabled > a {
+  color: #777777;
+}
+ul.social > li.disabled > a:hover,
+ul.social > li.disabled > a:focus {
+  color: #777777;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: not-allowed;
+}
+ul.social .open > a,
+ul.social .open > a:hover,
+ul.social .open > a:focus {
+  background-color: #eeeeee;
+  border-color: #337ab7;
+}
+ul.social .nav-divider {
+  height: 1px;
+  margin: 9px 0;
   overflow: hidden;
+  background-color: #e5e5e5;
 }
-.parallax img {
-  display: none;
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
+ul.social > li > a > img {
+  max-width: none;
 }
-section.module {
-  min-height: 200px;
+ul.social li {
+  display: inline-block;
+  margin-left: -4px;
+}
+ul.social li a {
+  color: #FFFFFF;
+  border-bottom: 2px solid transparent;
+}
+ul.social li a:hover,
+ul.social li a:focus,
+ul.social li a:active {
+  color: #FFFFFF;
+}
+ul.social li.facebook a {
+  color: rgba(255, 255, 255, 0.75);
+}
+ul.social li.facebook:hover a,
+ul.social li.facebook:focus a,
+ul.social li.facebook:active a {
+  border-bottom-color: #3b5998;
+}
+ul.social li.twitter a {
+  color: rgba(255, 255, 255, 0.75);
+}
+ul.social li.twitter:hover a,
+ul.social li.twitter:focus a,
+ul.social li.twitter:active a {
+  border-bottom-color: #55acee;
+}
+ul.social li.instagram a {
+  color: rgba(255, 255, 255, 0.75);
+}
+ul.social li.instagram:hover a,
+ul.social li.instagram:focus a,
+ul.social li.instagram:active a {
+  border-bottom-color: #3f729b;
+}
+ul.social li.flickr a {
+  color: rgba(255, 255, 255, 0.75);
+}
+ul.social li.flickr:hover a,
+ul.social li.flickr:focus a,
+ul.social li.flickr:active a {
+  border-bottom-color: #0063dc;
+}
+ul.social li.google-plus a {
+  color: rgba(255, 255, 255, 0.75);
+}
+ul.social li.google-plus:hover a,
+ul.social li.google-plus:focus a,
+ul.social li.google-plus:active a {
+  border-bottom-color: #dc4e41;
+}
+ul.social li.linkedin a {
+  color: rgba(255, 255, 255, 0.75);
+}
+ul.social li.linkedin:hover a,
+ul.social li.linkedin:focus a,
+ul.social li.linkedin:active a {
+  border-bottom-color: #0077b5;
+}
+ul.social li.pinterest a {
+  color: rgba(255, 255, 255, 0.75);
+}
+ul.social li.pinterest:hover a,
+ul.social li.pinterest:focus a,
+ul.social li.pinterest:active a {
+  border-bottom-color: #bd081c;
+}
+ul.social li.skype a {
+  color: rgba(255, 255, 255, 0.75);
+}
+ul.social li.skype:hover a,
+ul.social li.skype:focus a,
+ul.social li.skype:active a {
+  border-bottom-color: #00aff0;
+}
+ul.social li.spotify a {
+  color: rgba(255, 255, 255, 0.75);
+}
+ul.social li.spotify:hover a,
+ul.social li.spotify:focus a,
+ul.social li.spotify:active a {
+  border-bottom-color: #2ebd59;
+}
+ul.social li.soundcloud a {
+  color: rgba(255, 255, 255, 0.75);
+}
+ul.social li.soundcloud:hover a,
+ul.social li.soundcloud:focus a,
+ul.social li.soundcloud:active a {
+  border-bottom-color: #ff8800;
+}
+ul.social li.tumblr a {
+  color: rgba(255, 255, 255, 0.75);
+}
+ul.social li.tumblr:hover a,
+ul.social li.tumblr:focus a,
+ul.social li.tumblr:active a {
+  border-bottom-color: #35465c;
+}
+ul.social li.whatsapp a {
+  color: rgba(255, 255, 255, 0.75);
+}
+ul.social li.whatsapp:hover a,
+ul.social li.whatsapp:focus a,
+ul.social li.whatsapp:active a {
+  border-bottom-color: #43d854;
+}
+ul.social li.vine a {
+  color: rgba(255, 255, 255, 0.75);
+}
+ul.social li.vine:hover a,
+ul.social li.vine:focus a,
+ul.social li.vine:active a {
+  border-bottom-color: #00b488;
+}
+ul.social li.youtube a {
+  color: rgba(255, 255, 255, 0.75);
+}
+ul.social li.youtube:hover a,
+ul.social li.youtube:focus a,
+ul.social li.youtube:active a {
+  border-bottom-color: #cd201f;
+}
+ul.social li.medium a {
+  color: rgba(255, 255, 255, 0.75);
+}
+ul.social li.medium:hover a,
+ul.social li.medium:focus a,
+ul.social li.medium:active a {
+  border-bottom-color: #02b875;
+}
+ul.social li.github a {
+  color: rgba(255, 255, 255, 0.75);
+}
+ul.social li.github:hover a,
+ul.social li.github:focus a,
+ul.social li.github:active a {
+  border-bottom-color: #4183c4;
+}
+ul.social li a {
+  padding: 5px 8px;
+}
+ul.social li a i {
+  font-size: 24px;
+}
+ul.social li:hover,
+ul.social li:focus,
+ul.social li:active {
+  background: none;
+}
+ul.social li:hover a,
+ul.social li:focus a,
+ul.social li:active a {
+  background: none;
+  color: #ffffff;
 }
 section.module .full-size {
   position: absolute;
@@ -8873,6 +9075,13 @@ section.module .full-size {
 }
 section.module.main {
   background-color: #E95841;
+  -webkit-box-shadow: inset 0 0 100px rgba(17, 17, 17, 0.2);
+  box-shadow: inset 0 0 100px rgba(17, 17, 17, 0.2);
+}
+@media (min-width: 992px) {
+  section.module.main {
+    overflow: hidden;
+  }
 }
 section.module.main .content {
   display: table;
@@ -8889,16 +9098,25 @@ section.module.main .content .vertical {
   display: table-cell;
   vertical-align: middle;
 }
-section.module.main .content h1.logo img {
+section.module.main .content h1.logo {
+  margin-bottom: 30px;
+}
+section.module.main .content h1.logo img,
+section.module.main .content h1.logo svg {
   max-width: 300px;
   position: relative;
   left: -30px;
 }
+section.module.main .mouse-icon {
+  width: 30px;
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  margin-left: -15px;
+}
 section.module.main .background {
   opacity: 0.2;
   filter: alpha(opacity=20);
-}
-section.module.main .background img {
   -webkit-filter: blur(5px);
   -moz-filter: blur(5px);
   -o-filter: blur(5px);

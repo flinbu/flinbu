@@ -32,150 +32,171 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-.social_links_colors() {
+.social_links_colors(@base-color: @color-white) {
     a {
         color: @color-white;
+        border-bottom: 2px solid transparent;
         &:hover, &:focus, &:active {
-            background-color: @color-white !important;
+            color: @color-white;
         }
     }
     &.facebook {
         a {
-            background-color: @bc-facebook;
+            color: @base-color;
         }
         &:hover, &:focus, &:active {
             a {
-                color: @bc-facebook;
+                border-bottom-color: @bc-facebook;
             }
         }
     }
     &.twitter {
         a {
-            background-color: @bc-twitter;
+            color: @base-color;
         }
         &:hover, &:focus, &:active {
             a {
-                color: @bc-twitter;
+                border-bottom-color: @bc-twitter;
             }
         }
     }
     &.instagram {
         a {
-            background-color: @bc-instagram;
+            color: @base-color;
         }
         &:hover, &:focus, &:active {
             a {
-                color: @bc-instagram;
+                border-bottom-color: @bc-instagram;
             }
         }
     }
     &.flickr {
         a {
-            background-color: @bc-flickr;
+            color: @base-color;
         }
         &:hover, &:focus, &:active {
             a {
-                color: @bc-flickr;
+                border-bottom-color: @bc-flickr;
             }
         }
     }
     &.google-plus {
         a {
-            background-color: @bc-google-plus;
+            color: @base-color;
         }
         &:hover, &:focus, &:active {
             a {
-                color: @bc-google-plus;
+                border-bottom-color: @bc-google-plus;
             }
         }
     }
     &.linkedin {
         a {
-            background-color: @bc-linkedin;
+            color: @base-color;
         }
         &:hover, &:focus, &:active {
             a {
-                color: @bc-linkedin;
+                border-bottom-color: @bc-linkedin;
             }
         }
     }
     &.pinterest {
         a {
-            background-color: @bc-pinterest;
+            color: @base-color;
         }
         &:hover, &:focus, &:active {
             a {
-                color: @bc-pinterest;
+                border-bottom-color: @bc-pinterest;
             }
         }
     }
     &.skype {
         a {
-            background-color: @bc-skype;
+            color: @base-color;
         }
         &:hover, &:focus, &:active {
             a {
-                color: @bc-skype;
+                border-bottom-color: @bc-skype;
             }
         }
     }
     &.spotify {
         a {
-            background-color: @bc-spotify;
+            color: @base-color;
         }
         &:hover, &:focus, &:active {
             a {
-                color: @bc-spotify;
+                border-bottom-color: @bc-spotify;
             }
         }
     }
     &.soundcloud {
         a {
-            background-color: @bc-soundcloud;
+            color: @base-color;
         }
         &:hover, &:focus, &:active {
             a {
-                color: @bc-soundcloud;
+                border-bottom-color: @bc-soundcloud;
             }
         }
     }
     &.tumblr {
         a {
-            background-color: @bc-tumblr;
+            color: @base-color;
         }
         &:hover, &:focus, &:active {
             a {
-                color: @bc-tumblr;
+                border-bottom-color: @bc-tumblr;
             }
         }
     }
     &.whatsapp {
         a {
-            background-color: @bc-whatsapp;
+            color: @base-color;
         }
         &:hover, &:focus, &:active {
             a {
-                color: @bc-whatsapp;
+                border-bottom-color: @bc-whatsapp;
             }
         }
     }
     &.vine {
         a {
-            background-color: @bc-vine;
+            color: @base-color;
         }
         &:hover, &:focus, &:active {
             a {
-                color: @bc-vine;
+                border-bottom-color: @bc-vine;
             }
         }
     }
     &.youtube {
         a {
-            background-color: @bc-youtube;
+            color: @base-color;
         }
         &:hover, &:focus, &:active {
             a {
-                color: @bc-youtube;
+                border-bottom-color: @bc-youtube;
+            }
+        }
+    }
+    &.medium {
+        a {
+            color: @base-color;
+        }
+        &:hover, &:focus, &:active {
+            a {
+                border-bottom-color: @bc-medium;
+            }
+        }
+    }
+    &.github {
+        a {
+            color: @base-color;
+        }
+        &:hover, &:focus, &:active {
+            a {
+                border-bottom-color: @bc-github;
             }
         }
     }

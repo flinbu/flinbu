@@ -1,6 +1,10 @@
 // main: ../../flinbu.less
 section.module.main {
   background-color: @color-salmon;
+  .box-shadow(inset 0 0 100px fade(@color-black, 20%));
+  @media (min-width: @screen-md-min) {
+    overflow: hidden;
+  }
   .content {
     display: table;
     position: absolute;
@@ -13,17 +17,23 @@ section.module.main {
       vertical-align: middle;
     }
     h1.logo {
-      img {
+      margin-bottom: 30px;
+      img, svg {
         max-width: 300px;
         position: relative;
         left: -30px;
       }
     }
   }
+  .mouse-icon {
+    width: 30px;
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    margin-left: -15px;
+  }
   .background {
     .opacity(0.20);
-    img {
-      .blur(5);
-    }
+    .blur(5);
   }
 }

@@ -1510,6 +1510,16 @@ function get_social_networks($return = 'site') {
             'name' => 'Youtube',
             'class' => 'youtube',
             'icon' => 'fa-youtube-play'
+        ),
+        'medium' => array(
+            'name' => 'Medium',
+            'class' => 'medium',
+            'icon' => 'fa-medium'
+        ),
+        'github' => array(
+            'name' => 'Github',
+            'class' => 'github',
+            'icon' => 'fa-github'
         )
     );
     if ($return == 'site') {
@@ -1642,5 +1652,12 @@ function paginator($item_per_page, $total_records, $total_pages, $current_page, 
  */
 function get_device() {
   return (is_mobile()) ? 'mobile' : 'desktop';
+}
+
+function place_widget($widget) {
+  $widget = explode('-', $widget);
+  $folder = $widget[0];
+  $file = $widget[1];
+  get_template_part('templates/widgets/' . $folder . '/' . $file);
 }
 ?>
