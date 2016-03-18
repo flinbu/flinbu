@@ -1660,4 +1660,33 @@ function place_widget($widget) {
   $file = $widget[1];
   get_template_part('templates/widgets/' . $folder . '/' . $file);
 }
+
+function get_about_data() {
+  $about = new stdClass;
+  $about->first_name = get_theme_option('about_first_name');
+  $about->last_name = get_theme_option('about_last_name');
+  $about->email = get_theme_option('about_email');
+  $about->phone = get_theme_option('about_phone');
+  $about->web = get_theme_option('about_web');
+  $about->address = get_theme_option('about_address');
+  $about->avatar = get_theme_option('about_avatar');
+  $about->bio = get_theme_option('about_bio');
+
+  $socials = get_social_networks();
+  if ($socials) {
+    foreach ($socials as $net) {
+      $about->$net['class'] = $net['url'];
+    }
+  }
+
+  $portfolio_page = get_theme_option('about_portfolio');
+  $cv_page = get_theme_option('about_cv');
+  if ($portfolio_page) {
+    $about->portfolio = get_permalink($portfolio_page);
+  }
+  if ($cv_page) {
+    $about->cv = get_permalink($cv_page);
+  }
+  return $about;
+}
 ?>

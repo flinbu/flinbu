@@ -5,23 +5,14 @@ section.module.main {
   @media (min-width: @screen-md-min) {
     overflow: hidden;
   }
-  .content {
-    display: table;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    .tblr(0);
-    .vertical {
-      display: table-cell;
-      vertical-align: middle;
-    }
-    h1.logo {
-      margin-bottom: 30px;
-      img, svg {
-        max-width: 300px;
-        position: relative;
-        left: -30px;
+  h1.logo {
+    margin-bottom: 30px;
+    img, svg {
+      max-width: 300px;
+      position: relative;
+      left: -30px;
+      @media (max-width: @screen-xs-max) {
+        max-width: 200px;
       }
     }
   }
@@ -31,6 +22,9 @@ section.module.main {
     bottom: 100px;
     left: 50%;
     margin-left: -15px;
+    @media (max-width: @screen-xs-max) {
+      bottom: 30px;
+    }
   }
   .background {
     .opacity(0.20);

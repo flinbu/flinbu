@@ -1,12 +1,39 @@
 // main: ../flinbu.less
 
 section.module {
-  .full-size {
+  &.full-size {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    @media (max-width: @screen-xs-max) {
+      height: auto;
+    }
+  }
+  .content {
+    display: table;
     position: absolute;
     width: 100%;
     height: 100%;
+    z-index: 1;
+    .tblr(0);
+    .vertical {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    @media (max-width: @screen-xs-max) {
+      &:not(.main) {
+        position: relative;
+        height: auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        .vertical {
+          display: block;
+        }
+      }
+    }
   }
 }
 
 @import 'modules/main';
+@import 'modules/about';
 @import 'modules/portfolio';

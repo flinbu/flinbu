@@ -278,3 +278,43 @@
   -ms-filter: blur(unit(@size, px));
   filter: blur(unit(@size, px));
 }
+.make-colors(@colors) {
+  .create-color-classes(@iterator: 1) when(@iterator <= length(@colors)) {
+    @color-name: e(extract(@colors, @iterator));
+    @color-var: 'color-@{color-name}';
+    &.text-@{color-name} {
+      color: @@color-var;
+    }
+    &.bg-@{color-name} {
+      background-color: @@color-var;
+      &:hover {
+        background-color: @color-white;
+      }
+    }
+    &.border-@{color-name} {
+      border-color: @@color-var;
+    }
+    .create-color-classes((@iterator + 1));
+  }
+  .create-color-classes();
+}
+.make-colored-btn(@colors) {
+  .create-color-classes(@iterator: 1) when(@iterator <= length(@colors)) {
+    @color-name: e(extract(@colors, @iterator));
+    @color-var: 'color-@{color-name}';
+    &.btn-bordered-@{color-name} {
+      .button-variant(@@color-var, @color-white, @@color-var);
+    }
+    &.btn-@{color-name} {
+      .button-variant(@color-white, @@color-var, @@color-var);
+    }
+    .create-color-classes((@iterator + 1));
+  }
+  .create-color-classes();
+}
+.flat-btn() {
+  .box-shadow(none);
+  &:hover {
+    .box-shadow(none);
+  }
+}

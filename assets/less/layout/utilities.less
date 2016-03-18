@@ -11,3 +11,22 @@
   .tblr(0);
   z-index: 0;
 }
+.flinbu-btn {
+  .make-colored-btn(@all-colors);
+  .make-colors(@all-colors);
+  &.lg {
+    .btn-lg();
+  }
+  &.sm {
+    .btn-sm();
+  }
+  &.xs {
+    .btn-xs();
+  }
+  .flat-btn();
+  font-family: @font-roboto-slab;
+  text-decoration: none;
+  &:hover, &:focus, &:active, &:visited {
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,38 @@
+// main: ../../flinbu.less
+&.about {
+  .about-photo {
+    @media (max-width: @screen-xs-max) {
+      img {
+        max-width: 200px;
+      }
+    }
+  }
+  .about-bio {
+    font-family: @font-roboto-slab;
+    .font-size(22px);
+    font-weight: 500;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    del {
+      .font-size(18px);
+    }
+    @media (max-width: @screen-xs-max) {
+      .font-size(20px);
+      del {
+        .font-size(16px);
+      }
+    }
+  }
+  .about-links {
+    .flinbu-btn {
+      display: inline-block;
+    }
+    @media (max-width: @screen-xs-max) {
+      .flinbu-btn {
+        display: block;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+    }
+  }
+}
