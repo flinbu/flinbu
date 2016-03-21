@@ -2,7 +2,7 @@
   $module_background = get_theme_option('module_main_background_image');
   $module_logo = get_theme_option('module_main_logo');
 ?>
-<section class="module main full-size container-fluid">
+<section class="module main full-size container-fluid <?=$GLOBALS['device'];?>">
   <div class="content main">
     <div class="vertical">
       <div class="col-xs-12 col-md-4 col-md-offset-4">
@@ -19,7 +19,7 @@
   </div>
   <img src="<?php asset('img/mouse_icon.svg'); ?>" class="img-responsive center-block mouse-icon" data-sr="wait 2s, opacity 0, enter bottom, move 50px, reset">
   <?php if ($module_background) : $background = wp_get_attachment_image_src($module_background, '1360x768'); ?>
-    <div class="background parallax" style="background-image: url(<?=$background[0];?>);" data-speed="2"></div>
+    <div class="background parallax <?=$GLOBALS['device'];?>" style="background-image: url(<?=$background[0];?>);" data-speed="2"></div>
   <?php endif; ?>
   <div class="clearfix"></div>
 </section>

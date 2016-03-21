@@ -8864,6 +8864,9 @@ body main {
   right: 0px;
   z-index: 0;
 }
+.parallax.mobile {
+  background-attachment: scroll;
+}
 .flinbu-btn {
   -webkit-box-shadow: none;
   box-shadow: none;
