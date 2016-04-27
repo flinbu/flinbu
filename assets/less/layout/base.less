@@ -5,6 +5,13 @@ body {
     margin: 0;
     padding: 0;
   }
+  a {
+    color: @color-salmon;
+    .transition(color 0.5s ease-out);
+    &:hover, &:focus, &:active {
+      color: darken(@color-salmon, 10%);
+    }
+  }
 }
 [data-sr] {
   visibility: hidden;

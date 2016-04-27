@@ -9,7 +9,9 @@ WebFont.load({
 
 $(document).ready(function() {
   $('.full-size').fullSize();
+  $('.full-size-min').fullSizeMin();
   $('.parallax').parallax();
   $('.behance-portfolio').behancePortfolio();
+  $('.async-bg').asyncBackground();
   window.sr = new scrollReveal();
 });

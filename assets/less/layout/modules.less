@@ -1,6 +1,8 @@
 // main: ../flinbu.less
 
 section.module {
+  background-color: @color-white;
+  z-index: 2;
   &.full-size {
     position: relative;
     width: 100%;
@@ -30,6 +32,18 @@ section.module {
           display: block;
         }
       }
+    }
+  }
+  .module-title {
+    margin-bottom: 30px;
+    h2 {
+      font-family: @font-roboto-slab;
+      .font-size(60px);
+      font-weight: 700;
+      color: @color-salmon;
+    }
+    small {
+      color: @color-gray;
     }
   }
   @import 'modules/main';

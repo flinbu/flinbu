@@ -1,15 +1,23 @@
 // main: ../../flinbu.less
 &.portfolio {
+  position: relative;
+  z-index: 1;
   .items {
     article {
       position: relative;
       margin-bottom: 30px;
+      .opacity(0);
+      .transition(opacity 0.5s ease-in-out);
+      &.in {
+        .opacity(1);
+      }
       a {
         display: block;
         position: relative;
         background-color: @color-salmon;
         img {
           .transition(all 0.5s ease-in-out);
+          width: 100%;
         }
         h2 {
           position: absolute;
@@ -31,6 +39,21 @@
           }
         }
       }
+    }
+  }
+  .behance-nav {
+    position: fixed;
+    top: 50%;
+    margin-top: -30px;
+    &.behance-nav-prev {
+      left: 20px;
+    }
+    &.behance-nav-next {
+      right: 20px;
+    }
+    i {
+      font-size: 60px;
+      color: @color-salmon;
     }
   }
 }
