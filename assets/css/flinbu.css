@@ -8864,9 +8864,6 @@ body main {
   right: 0px;
   z-index: 0;
 }
-.parallax.mobile {
-  background-attachment: scroll;
-}
 .flinbu-btn {
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -10448,11 +10445,11 @@ section.module.main .background {
   filter: blur(5px);
 }
 @media (max-width: 767px) {
-  .about .about-photo img {
+  section.module.about .about-photo img {
     max-width: 200px;
   }
 }
-.about .about-bio {
+section.module.about .about-bio {
   font-family: 'Roboto Slab', serif;
   font-size: 22px;
   font-size: 2.2rem;
@@ -10460,27 +10457,74 @@ section.module.main .background {
   padding-top: 25px;
   padding-bottom: 25px;
 }
-.about .about-bio del {
+section.module.about .about-bio del {
   font-size: 18px;
   font-size: 1.8rem;
 }
 @media (max-width: 767px) {
-  .about .about-bio {
+  section.module.about .about-bio {
     font-size: 20px;
     font-size: 2rem;
   }
-  .about .about-bio del {
+  section.module.about .about-bio del {
     font-size: 16px;
     font-size: 1.6rem;
   }
 }
-.about .about-links .flinbu-btn {
+section.module.about .about-links .flinbu-btn {
   display: inline-block;
 }
 @media (max-width: 767px) {
-  .about .about-links .flinbu-btn {
+  section.module.about .about-links .flinbu-btn {
     display: block;
     margin-bottom: 20px;
     text-align: center;
   }
+}
+section.module.portfolio .items article {
+  position: relative;
+  margin-bottom: 30px;
+}
+section.module.portfolio .items article a {
+  display: block;
+  position: relative;
+  background-color: #E95841;
+}
+section.module.portfolio .items article a img {
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out 0.2s ease-out;
+  -moz-transition: all 0.5s ease-in-out 0.2s ease-out;
+  -o-transition: all 0.5s ease-in-out 0.2s ease-out;
+  transition: all 0.5s ease-in-out 0.2s ease-out;
+}
+section.module.portfolio .items article a h2 {
+  position: absolute;
+  width: 100%;
+  display: block;
+  padding: 20px;
+  margin: 0;
+  left: 0;
+  bottom: 0;
+  color: #FFFFFF;
+  font-family: 'Roboto Slab', serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  background-image: -webkit-linear-gradient(top, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, 0.7) 100%);
+  background-image: -o-linear-gradient(top, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, 0.7) 100%);
+  background-image: linear-gradient(to bottom, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, 0.7) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00111111', endColorstr='#b3111111', GradientType=0);
+}
+section.module.portfolio .items article a:hover img,
+section.module.portfolio .items article a:focus img,
+section.module.portfolio .items article a:active img {
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+  opacity: 0.3;
+  filter: alpha(opacity=30);
 }

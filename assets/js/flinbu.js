@@ -10,5 +10,6 @@ WebFont.load({
 $(document).ready(function() {
   $('.full-size').fullSize();
   $('.parallax').parallax();
+  $('.behance-portfolio').behancePortfolio();
   window.sr = new scrollReveal();
 });
