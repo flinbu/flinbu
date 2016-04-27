@@ -62,8 +62,15 @@ function behancePortfolio(el) {
 function page_portfolio(page, key, user, tpl, container) {
   var api_url = 'http://www.behance.net/v2/users/{user}/projects',
       nav_prev = container.parent().parent().find('.behance-nav-prev'),
-      nav_next = container.parent().parent().find('.behance-nav-next');
+      nav_next = container.parent().parent().find('.behance-nav-next'),
+      container_height = 'auto';
+  if (page == 2) {
+    container_height = container.height();
+    container.height(container_height);
+  }
   container.find('article').removeClass('in');
+  nav_prev.prop('disabled', true);
+  nav_next.prop('disabled', true);
   setTimeout(function() {
     $.ajax({
       url : api_url.replace('{user}', user),
@@ -98,6 +105,8 @@ function page_portfolio(page, key, user, tpl, container) {
             }, rand);
           });
         });
+        nav_prev.prop('disabled', false);
+        nav_next.prop('disabled', false);
       }
     });
   }, 500);
@@ -106,8 +115,7 @@ function convertToSlug(Text) {
     return Text
         .toLowerCase()
         .replace(/[^\w ]+/g,'')
-        .replace(/ +/g,'-')
-        ;
+        .replace(/ +/g,'-');
 }
 
 function asyncBackground (el) {

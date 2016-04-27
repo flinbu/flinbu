@@ -2,6 +2,18 @@
 &.portfolio {
   position: relative;
   z-index: 1;
+  background-color: @color-salmon;
+  .module-title {
+    h2 {
+      color: @color-white;
+    }
+    small {
+      color: @color-white;
+      a {
+        color: @color-white;
+      }
+    }
+  }
   .items {
     article {
       position: relative;
@@ -14,7 +26,7 @@
       a {
         display: block;
         position: relative;
-        background-color: @color-salmon;
+        background-color: @color-gray-darker;
         img {
           .transition(all 0.5s ease-in-out);
           width: 100%;
@@ -53,7 +65,7 @@
     }
     i {
       font-size: 60px;
-      color: @color-salmon;
+      color: @color-white;
     }
   }
 }
