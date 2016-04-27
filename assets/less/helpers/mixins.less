@@ -278,6 +278,13 @@
   -ms-filter: blur(unit(@size, px));
   filter: blur(unit(@size, px));
 }
+.custom-portfolio-images(@blur, @grayscale, @contrast) {
+  -webkit-filter: blur(unit(@blur, px)) contrast(@contrast) saturate(@grayscale);
+  -moz-filter: blur(unit(@blur, px)) contrast(@contrast) saturate(@grayscale);
+  -o-filter: blur(unit(@blur, px)) contrast(@contrast) saturate(@grayscale);
+  -ms-filter: blur(unit(@blur, px)) contrast(@contrast) saturate(@grayscale);
+  filter: blur(unit(@blur, px)) contrast(@contrast) saturate(@grayscale);
+}
 .make-colors(@colors) {
   .create-color-classes(@iterator: 1) when(@iterator <= length(@colors)) {
     @color-name: e(extract(@colors, @iterator));
@@ -317,4 +324,23 @@
   &:hover {
     .box-shadow(none);
   }
+}
+.vendor(@property, @value) {
+  -webkit-@{property}: @value;
+  -moz-@{property}: @value;
+  -ms-@{property}: @value;
+  -o-@{property}: @value;
+  @{property}: @value;
+}
+.calc(@property, @value) {
+  @{property}: -webkit-calc(@value);
+  @{property}: calc(@value);
+}
+.scale3d(@x, @y, @z) {
+  -webkit-transform: scale3d(@x, @y, @z);
+  transform: scale3d(@x, @y, @z);
+}
+.rotate3d(@x, @y, @z) {
+  -webkit-transform: rotate3d(@x, @y, @z);
+  transform: rotate3d(@x, @y, @z);
 }

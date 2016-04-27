@@ -89,13 +89,15 @@ function page_portfolio(page, key, user, tpl, container) {
         container.html('');
         data.projects.forEach(function (project) {
           var project_img = (project.covers['404']) ? project.covers[404] : project.covers['202'];
-          var project_html = tpl.replace(/{title}/gi, project.name).replace(/{image}/gi, project_img).replace(/{url}/gi, project.url),
-              project_item = $(project_html),
-              project_slug_tags = '';
+          var project_slug_tags = '',
+              name_tag = '';
           project.fields.forEach(function (tag) {
             var slug_tag = convertToSlug(tag);
+            name_tag = '<li>' + tag + '</li>';
             project_slug_tags += ' ' + slug_tag;
           });
+          var project_html = tpl.replace(/{title}/gi, project.name).replace(/{image}/gi, project_img).replace(/{url}/gi, project.url).replace(/{tags}/gi, name_tag),
+              project_item = $(project_html);
           project_item.addClass(project_slug_tags);
           container.append(project_item);
           project_item.find('img').load(function() {
@@ -117,7 +119,6 @@ function convertToSlug(Text) {
         .replace(/[^\w ]+/g,'')
         .replace(/ +/g,'-');
 }
-
 function asyncBackground (el) {
   var background_full = el.data('background'),
       img = $('<img>').attr({
@@ -134,6 +135,7 @@ function asyncBackground (el) {
     el.addClass('active parallax').parallax();
   });
 }
+
 (function ($) {
   $.fn.fullSize = function() {
     var el = $(this);
